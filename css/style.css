@@ -218,4 +218,50 @@ a{color:inherit;text-decoration:none}
   .nav-links.open{transform:none}
   .nav-toggle{display:block}
   .field-row{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+  .cards{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+}
+
+/* ---------- Mobile (Smartphone) ---------- */
+@media(max-width:600px){
+  .container{padding:0 16px}
+  .section{padding:60px 0}
+  .section-title{font-size:1.5rem}
+  .kicker{font-size:.75rem}
+  .btn{padding:14px 22px;width:100%;text-align:center}
+
+  /* Navigation */
+  .brand-text{font-size:.95rem}
+  .brand-mark{font-size:1.4rem}
+
+  /* Hero */
+  .hero{min-height:88vh}
+  .hero-content{padding-top:110px;padding-bottom:60px}
+  .hero-title{font-size:2.6rem;line-height:1.05}
+  .hero-sub{font-size:1.05rem}
+  .hero-actions{flex-direction:column;align-items:stretch;gap:12px}
+  .hero-scroll{display:none}
+
+  /* Cards & Galerie: 1 Spalte, voller Touch */
+  .cards,.gallery{grid-template-columns:1fr;gap:18px}
+  .card,.g-item{border-radius:18px}
+  .gallery-filters{gap:8px;margin-bottom:22px}
+  .gfilter{padding:8px 14px;font-size:.78rem}
+
+  /* Über Uns */
+  .about-media img{height:auto;max-height:320px;object-fit:cover}
+  .about-badge{left:auto;right:-6px;bottom:-14px;padding:14px 18px}
+  .about-badge strong{font-size:1.2rem}
+  .about-sign{flex-direction:column;align-items:stretch;gap:16px}
+
+  /* Kontaktformular — fingerfreundlich */
+  .contact-form{padding:24px 16px}
+  .contact-form h3{font-size:1.3rem}
+  .field input,.field select,.field textarea{padding:14px 13px;font-size:16px} /* 16px verhindert iOS-Zoom */
+  .check{font-size:.78rem}
+  .info-card{font-size:.92rem}
+
+  /* Footer */
+  .footer-grid{flex-direction:column;align-items:flex-start;gap:16px}
+  .footer-links{flex-wrap:wrap;gap:14px}
 }
