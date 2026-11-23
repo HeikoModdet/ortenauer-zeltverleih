@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-bind="seo.title">Ortenauer Zeltverleih – Fest- & Partyzelte mieten</title>
+<meta name="description" data-bind="seo.description" content="">
+<link rel="icon" type="image/png" data-bind="seo.favicon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Party-Partikel-Overlay (Konfetti / Lichter) ===== -->
+<canvas id="party-canvas" aria-hidden="true"></canvas>
+
+<!-- ===== Navigation ===== -->
+<header class="nav" id="nav">
+  <div class="nav-inner container">
+    <a class="brand" href="#top">
+      <span class="brand-mark">🎪</span>
+      <span class="brand-text" data-bind="brand.name">Ortenauer Zeltverleih</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#ueber">Über Uns</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#referenzen">Referenzen</a>
+      <a href="#partner">Partner</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü">☰</button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="hero-bg">
+    <img id="heroImg" src="" alt="" class="hero-bg-img">
+    <div class="hero-overlay"></div>
+    <div class="hero-shine"></div>
+  </div>
+  <div class="hero-content container">
+    <span class="kicker badge hero-kicker" data-bind="hero.kicker">Ihr kompetenter Partner</span>
+    <h1 class="hero-title" data-bind="hero.title">Zelte einfach mieten</h1>
+    <p class="hero-sub" data-bind="hero.subtitle">Fest- und Partyzelte in der Ortenau.</p>
+    <p class="hero-tagline" data-bind="hero.tagline">Und wenn das Zelt nicht wär, dann wär es Open Air.</p>
+    <div class="hero-actions">
+      <a href="#kontakt" class="btn btn-primary" data-bind="hero.cta_primary">Jetzt Zelt anfragen</a>
+      <a href="#leistungen" class="btn btn-ghost" data-bind="hero.cta_secondary">Leistungen ansehen</a>
+    </div>
+    <div class="hero-scroll"><span></span></div>
+  </div>
+</section>
+
+<!-- ===== ÜBER UNS ===== -->
+<section class="section about" id="ueber">
+  <div class="container about-grid">
+    <div class="about-media reveal">
+      <img id="ueberPortrait" src="" alt="Uwe Fladt – Inhaber">
+      <div class="about-badge">
+        <strong data-bind="brand.est">Seit 2008</strong>
+        <span>in der Ortenau</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <span class="kicker" data-bind="ueber.kicker">Kompetent seit 2008</span>
+      <h2 class="section-title" data-bind="ueber.title">Ihr Partner für professionelle Zeltvermietung</h2>
+      <p data-bind="ueber.text">Mit uns erhalten Sie Zelte in gehobener Qualität zu fairen Preisen.</p>
+      <p data-bind="ueber.text2">Gerne beraten wir Sie ausführlich und persönlich.</p>
+      <div class="about-sign">
+        <div>
+          <strong data-bind="ueber.name">Uwe Fladt</strong>
+          <span data-bind="ueber.role">Inhaber</span>
+        </div>
+        <a href="#kontakt" class="btn btn-primary" data-bind="ueber.cta">Jetzt einen Termin vereinbaren!</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEISTUNGEN / ZELTE ===== -->
+<section class="section leistungen" id="leistungen">
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="kicker" data-bind="leistungen.kicker">Leistungen</span>
+      <h2 class="section-title" data-bind="leistungen.title">Ob Fest-, Party- oder Pagodenzelt — bei uns werden Sie fündig.</h2>
+      <p class="section-note" data-bind="leistungen.note">Für Partyzelte steht ein Holzboden zur Verfügung.</p>
+    </header>
+
+    <div class="cards" id="cards"></div>
+    <p class="leist-hint">Sie haben spezielle Wünsche? <a href="#kontakt">Nehmen Sie gerne Kontakt zu uns auf.</a></p>
+  </div>
+</section>
+
+<!-- ===== REFERENZEN ===== -->
+<section class="section refs" id="referenzen">
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="kicker" data-bind="referenzen.kicker">Referenzen</span>
+      <h2 class="section-title" data-bind="referenzen.title">Unsere Projekte & Events</h2>
+    </header>
+    <div class="gallery" id="gallery"></div>
+    <p class="leist-hint" data-bind="referenzen.text">Sie haben spezielle Wünsche? Nehmen Sie gerne Kontakt zu uns auf.</p>
+  </div>
+</section>
+
+<!-- ===== PARTNER ===== -->
+<section class="section partners" id="partner">
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="kicker" data-bind="partner.kicker">Unsere Partner</span>
+      <h2 class="section-title" data-bind="partner.title">Verlässliche Partner an unserer Seite</h2>
+    </header>
+    <div class="partner-row" id="partnerRow"></div>
+  </div>
+</section>
+
+<!-- ===== KONTAKT ===== -->
+<section class="section contact" id="kontakt">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <span class="kicker" data-bind="kontakt.kicker">Kontakt</span>
+      <h2 class="section-title" data-bind="kontakt.title">Sie haben Fragen? Melden Sie sich gern bei uns!</h2>
+
+      <div class="info-card">
+        <div class="info-line"><span>👤</span><div><strong data-bind="kontakt.inhaber">Uwe Fladt</strong><br><span data-bind="kontakt.firma">Ortenauer Zeltverleih</span></div></div>
+        <div class="info-line"><span>📍</span><div data-bind="kontakt.adresse">Hohrottweg 8, 77694 Kehl-Querbach</div></div>
+        <div class="info-line"><span>📱</span><div><a href="tel:+491605502582" data-bind="kontakt.mobil">0160 5502582</a></div></div>
+        <div class="info-line"><span>☎️</span><div><a href="tel:+497853998282" data-bind="kontakt.telefon">07853 998282</a></div></div>
+        <div class="info-line"><span>🖨️</span><div data-bind="kontakt.fax">07853 998050</div></div>
+        <div class="info-line"><span>✉️</span><div><a href="mailto:info@ortenauer-zeltverleih.de" data-bind="kontakt.email">info@ortenauer-zeltverleih.de</a></div></div>
+      </div>
+
+      <div class="info-card hours">
+        <strong>Öffnungszeiten</strong>
+        <div id="zeiten"></div>
+      </div>
+    </div>
+
+    <form class="contact-form reveal" id="anfrageForm" novalidate>
+      <h3>Zeltanfrage stellen</h3>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="f_vorname">Vorname *</label>
+          <input type="text" id="f_vorname" name="vorname" required>
+        </div>
+        <div class="field">
+          <label for="f_nachname">Nachname *</label>
+          <input type="text" id="f_nachname" name="nachname" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="f_email">E-Mail *</label>
+        <input type="email" id="f_email" name="email" required>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="f_telefon">Telefon *</label>
+          <input type="tel" id="f_telefon" name="telefon" required>
+        </div>
+        <div class="field">
+          <label for="f_ort">Veranstaltungsort</label>
+          <input type="text" id="f_ort" name="ort">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="f_kategorie">Womit können wir Ihnen helfen?</label>
+        <select id="f_kategorie" name="kategorie"></select>
+      </div>
+
+      <div class="field">
+        <label for="f_nachricht">Nachricht *</label>
+        <textarea id="f_nachricht" name="nachricht" rows="5" required></textarea>
+      </div>
+
+      <label class="check">
+        <input type="checkbox" id="f_dsgvo" required>
+        <span id="dsgvoText"></span>
+      </label>
+
+      <button type="submit" class="btn btn-primary btn-block">Senden 🎉</button>
+      <div class="form-status" id="formStatus"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <strong class="footer-brand" data-bind="brand.name">Ortenauer Zeltverleih</strong>
+      <p data-bind="brand.slogan">Fest- & Partyzelte — einfach mieten.</p>
+    </div>
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <div class="footer-meta">© <span id="year"></span> Ortenauer Zeltverleih · Uwe Fladt</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

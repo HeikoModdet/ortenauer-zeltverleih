@@ -1,0 +1,352 @@
+{
+  "seo": {
+    "title": "Ortenauer Zeltverleih – Fest- & Partyzelte mieten in Kehl/Ortenau",
+    "description": "Zelte mieten in Kehl & Ortenau: Festzelte, Partyzelte, Pagodenzelte & Toilettenwagen. Professional seit 2008. Jetzt anfragen!",
+    "favicon": "images/favicon.png"
+  },
+  "brand": {
+    "name": "Ortenauer Zeltverleih",
+    "slogan": "Fest- & Partyzelte — einfach mieten.",
+    "est": "Seit 2008"
+  },
+  "hero": {
+    "kicker": "Ihr kompetenter und zuverlässiger Partner",
+    "title": "Zelte einfach mieten",
+    "subtitle": "Fest- und Partyzelte zuverlässig in der Ortenau — vom 16-m-Festzelt bis zur Pagode und zum Toilettenwagen.",
+    "tagline": "Und wenn das Zelt nicht wär, dann wär es Open Air.",
+    "image": "images/24m-Zelt-Kat.jpg",
+    "cta_primary": "Jetzt Zelt anfragen",
+    "cta_secondary": "Leistungen ansehen"
+  },
+  "ueber": {
+    "kicker": "Kompetent und zuverlässig seit 2008 in der Ortenau",
+    "title": "Ihr Partner für professionelle Zeltvermietung",
+    "text": "Wir sind Ihr Partner, wenn es um die professionelle Vermietung von Zelten, für private und geschäftliche Anlässe geht. Bei uns erhalten Sie Partyzelte, Festzelte und Eventzelte sowie Pagodenzelte in gehobener Qualität zu fairen Preisen.",
+    "text2": "Gerne beraten wir Sie ausführlich und persönlich (natürlich auch vor Ort). Wir unterstützen Sie bei der Auswahl der richtigen Zeltgröße bis hin zum passenden Bodenbelag. Für Innendekoration, Beleuchtung, Beschallung bis zur Zeltheizung arbeiten wir mit bewährten Partnern.",
+    "name": "Uwe Fladt",
+    "role": "Inhaber, Ortenauer Zeltverleih",
+    "portrait": "images/platzhalter-person.png",
+    "cta": "Jetzt einen Termin vereinbaren!"
+  },
+  "leistungen": {
+    "kicker": "Leistungen",
+    "title": "Ob Fest-, Party- oder Pagodenzelt — bei uns werden Sie fündig.",
+    "note": "Für Partyzelte steht ein Holzboden bis zu 90 m² zur Verfügung. Des Weiteren bieten wir auch einen Toilettenwagen zur Miete an."
+  },
+  "zelte": [
+    {
+      "id": "festzelt",
+      "kategorie": "Festzelt",
+      "name": "Festzelt (16 m × 15 m)",
+      "image": "images/16m-Zelt-Kat.jpg",
+      "details": [
+        "Mindestaufstellgröße: 16 m × 15 m",
+        "im 5 m Raster erweiterbar",
+        "maximal bis zu 40 m aufstellbar"
+      ]
+    },
+    {
+      "id": "festzelt24",
+      "kategorie": "Festzelt",
+      "name": "Festzelt (24 m × 15 m)",
+      "image": "images/24m-Zelt-Kat.jpg",
+      "details": [
+        "Mindestaufstellgröße: 24 m × 15 m",
+        "im 5 m Raster erweiterbar",
+        "maximal bis zu 40 m aufstellbar"
+      ]
+    },
+    {
+      "id": "partyzelt6",
+      "kategorie": "Partyzelt Standard 6 m",
+      "name": "Partyzelt (6 m × 9 m)",
+      "image": "images/6m-ZeltKat.jpg",
+      "details": [
+        "Mindestaufstellgröße: 6 m × 9 m",
+        "Farbe: weiß",
+        "im 3 m Raster erweiterbar",
+        "maximal bis zu 30 m aufstellbar"
+      ]
+    },
+    {
+      "id": "partyzelt8blau",
+      "kategorie": "Partyzelt",
+      "name": "Partyzelt (8 m × 9 m)",
+      "image": "images/8m-Zelt-Kat.jpg",
+      "details": [
+        "Mindestaufstellgröße: 8 m × 9 m",
+        "Farbe: blau-weiß gestreift",
+        "im 3 m Raster erweiterbar",
+        "maximal bis zu 57 m aufstellbar",
+        "Wirtschaftsanbau 3 m × 9 m (bis 39 m)"
+      ]
+    },
+    {
+      "id": "partyzelt8rot",
+      "kategorie": "Partyzelt",
+      "name": "Partyzelt (8 m × 9 m)",
+      "image": "images/8m-Zelt-rot-Kat.jpg",
+      "details": [
+        "Mindestaufstellgröße: 8 m × 9 m",
+        "Farbe: rot-weiß gestreift",
+        "im 3 m Raster erweiterbar",
+        "maximal bis zu 24 m aufstellbar"
+      ]
+    },
+    {
+      "id": "pagode3",
+      "kategorie": "Pagodenzelt",
+      "name": "Pagodenzelt (3 m × 3 m)",
+      "image": "images/3x3m-Pagode-Kat.jpg",
+      "details": [
+        "Größe: 3 m × 3 m",
+        "ideal für Stände & kleine Events"
+      ]
+    },
+    {
+      "id": "pagode4",
+      "kategorie": "Pagodenzelt",
+      "name": "Pagodenzelt (4 m × 4 m)",
+      "image": "images/4x4m-Pagode-Kat.jpg",
+      "details": [
+        "Größe: 4 m × 4 m",
+        "ideal für Stände & Events"
+      ]
+    },
+    {
+      "id": "toilettenwagen",
+      "kategorie": "Toilettenwagen",
+      "name": "Toilettenwagen",
+      "image": "images/Toilettenwagen-Kat.jpg",
+      "details": [
+        "Zulassung bis zu 600 Personen auf Veranstaltungen",
+        "separate Herren-/Damen-Bereiche"
+      ]
+    }
+  ],
+  "referenzen": {
+    "kicker": "Referenzen",
+    "title": "Unsere Projekte & Events",
+    "text": "Sie haben spezielle Wünsche? Nehmen Sie gerne Kontakt zu uns auf.",
+    "items": [
+      {
+        "name": "Festzelte",
+        "category": "Festzelte",
+        "image": "images/16m-Zelt-Kat.jpg"
+      },
+      {
+        "name": "Festzelte",
+        "category": "Festzelte",
+        "image": "images/24m-Zelt-Kat-1.jpg"
+      },
+      {
+        "name": "Partyzelte",
+        "category": "Partyzelte",
+        "image": "images/6m-1.jpg"
+      },
+      {
+        "name": "Partyzelte",
+        "category": "Partyzelte",
+        "image": "images/6m-7.jpg"
+      },
+      {
+        "name": "Partyzelte",
+        "category": "Partyzelte",
+        "image": "images/8m-Zelt-Kat.jpg"
+      },
+      {
+        "name": "Partyzelte",
+        "category": "Partyzelte",
+        "image": "images/8m-Zelt-rot-Kat.jpg"
+      },
+      {
+        "name": "Pagodenzelte",
+        "category": "Pagodenzelte",
+        "image": "images/3x3m-5.jpg"
+      },
+      {
+        "name": "Toilettenwagen",
+        "category": "Toilettenwagen",
+        "image": "images/Toilettenwagen-Kat.jpg"
+      },
+      {
+        "name": "Pagodenzelte (3m x 3m)",
+        "category": "Pagodenzelte (3m x 3m)",
+        "image": "images/3x3m-Pagode-Kat.jpg"
+      },
+      {
+        "name": "Pagodenzelte (3m x 3m)",
+        "category": "Pagodenzelte (3m x 3m)",
+        "image": "images/3x3m-1.jpg"
+      },
+      {
+        "name": "Pagodenzelte (3m x 3m)",
+        "category": "Pagodenzelte (3m x 3m)",
+        "image": "images/3x3m-22.jpg"
+      },
+      {
+        "name": "Pagodenzelte (3m x 3m)",
+        "category": "Pagodenzelte (3m x 3m)",
+        "image": "images/3x3m-3.jpg"
+      },
+      {
+        "name": "Pagodenzelte (3m x 3m)",
+        "category": "Pagodenzelte (3m x 3m)",
+        "image": "images/3x3m-4.jpg"
+      },
+      {
+        "name": "Pagodenzelte (3m x 3m)",
+        "category": "Pagodenzelte (3m x 3m)",
+        "image": "images/3x3m-5-1.jpg"
+      },
+      {
+        "name": "Pagodenzelte (3m x 3m)",
+        "category": "Pagodenzelte (3m x 3m)",
+        "image": "images/3x3m-6.jpg"
+      },
+      {
+        "name": "Pagodenzelte (4m x 4m)",
+        "category": "Pagodenzelte (4m x 4m)",
+        "image": "images/4x4m-Pagode-Kat.jpg"
+      },
+      {
+        "name": "Pagodenzelte (4m x 4m)",
+        "category": "Pagodenzelte (4m x 4m)",
+        "image": "images/4x4m-1.jpg"
+      },
+      {
+        "name": "Pagodenzelte (4m x 4m)",
+        "category": "Pagodenzelte (4m x 4m)",
+        "image": "images/4x4m-2.jpg"
+      },
+      {
+        "name": "Pagodenzelte (4m x 4m)",
+        "category": "Pagodenzelte (4m x 4m)",
+        "image": "images/4x4m-3.jpg"
+      },
+      {
+        "name": "Pagodenzelte (4m x 4m)",
+        "category": "Pagodenzelte (4m x 4m)",
+        "image": "images/4x4m-4.jpg"
+      },
+      {
+        "name": "Pagodenzelte (4m x 4m)",
+        "category": "Pagodenzelte (4m x 4m)",
+        "image": "images/4x4m-5.jpg"
+      },
+      {
+        "name": "Pagodenzelte (4m x 4m)",
+        "category": "Pagodenzelte (4m x 4m)",
+        "image": "images/4x4m-6.jpg"
+      },
+      {
+        "name": "Festzelt (Standard 6m)",
+        "category": "Festzelt (Standard 6m)",
+        "image": "images/6m-ZeltKat-1.jpg"
+      },
+      {
+        "name": "Festzelt (Standard 6m)",
+        "category": "Festzelt (Standard 6m)",
+        "image": "images/6m-1-1.jpg"
+      },
+      {
+        "name": "Festzelt (Standard 6m)",
+        "category": "Festzelt (Standard 6m)",
+        "image": "images/6m-2.jpg"
+      },
+      {
+        "name": "Festzelt (Standard 6m)",
+        "category": "Festzelt (Standard 6m)",
+        "image": "images/6m-3.jpg"
+      },
+      {
+        "name": "Festzelt (Standard 6m)",
+        "category": "Festzelt (Standard 6m)",
+        "image": "images/6m-4.jpg"
+      },
+      {
+        "name": "Festzelt (Standard 6m)",
+        "category": "Festzelt (Standard 6m)",
+        "image": "images/6m-5-1.jpg"
+      },
+      {
+        "name": "Festzelt (Standard 6m)",
+        "category": "Festzelt (Standard 6m)",
+        "image": "images/6m-6.jpg"
+      },
+      {
+        "name": "Festzelt (Standard 6m)",
+        "category": "Festzelt (Standard 6m)",
+        "image": "images/6m-7-1.jpg"
+      },
+      {
+        "name": "Partyzelt (8m x 9m)",
+        "category": "Partyzelt (8m x 9m)",
+        "image": "images/8m-Zelt-rot-Kat-1.jpg"
+      },
+      {
+        "name": "Partyzelt (8m x 9m)",
+        "category": "Partyzelt (8m x 9m)",
+        "image": "images/8m-Zelt-Kat.jpg"
+      },
+      {
+        "name": "Festzelt (16m x 15m)",
+        "category": "Festzelt (16m x 15m)",
+        "image": "images/16m-Zelt-Kat-1.jpg"
+      },
+      {
+        "name": "Festzelt (24m x 15m)",
+        "category": "Festzelt (24m x 15m)",
+        "image": "images/24m-Zelt-Kat-1.jpg"
+      }
+    ]
+  },
+  "partner": {
+    "kicker": "Unsere Partner",
+    "title": "Verlässliche Partner an unserer Seite",
+    "items": [
+      {
+        "name": "Roeder Industrial Buildings",
+        "image": "images/Roeder_Industrial-Buildings_Logo_neu.png"
+      },
+      {
+        "name": "Losberger De Boer",
+        "image": "images/Losberger_De_Boer_logo.svg-e1645631580546.png"
+      },
+      {
+        "name": "Lott",
+        "image": "images/lott.png"
+      }
+    ]
+  },
+  "kontakt": {
+    "kicker": "Kontakt",
+    "title": "Sie haben Fragen? Melden Sie sich gern bei uns!",
+    "inhaber": "Uwe Fladt",
+    "firma": "Ortenauer Zeltverleih",
+    "adresse": "Hohrottweg 8, 77694 Kehl-Querbach",
+    "mobil": "0160 5502582",
+    "telefon": "07853 998282",
+    "fax": "07853 998050",
+    "email": "info@ortenauer-zeltverleih.de",
+    "zeiten": [
+      "Montag: 07:00 bis 20:00 Uhr",
+      "Dienstag: 07:00 bis 20:00 Uhr",
+      "Mittwoch: 07:00 bis 20:00 Uhr",
+      "Donnerstag: 07:00 bis 20:00 Uhr",
+      "Freitag: 07:00 bis 20:00 Uhr",
+      "Samstag: 08:00 bis 14:00 Uhr"
+    ]
+  },
+  "form": {
+    "options": [
+      "Festzelt",
+      "Partyzelt",
+      "Pagodenzelt",
+      "Toilettenwagen",
+      "Sonstiges"
+    ],
+    "dsgvo": "Ich willige ein, dass diese Website meine übermittelten Informationen speichert, sodass meine Anfrage beantwortet werden kann. Näheres über die gespeicherten Daten erfahren Sie unter Datenschutz.",
+    "mailto": "info@ortenauer-zeltverleih.de"
+  }
+}
