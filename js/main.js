@@ -154,47 +154,6 @@
     }
   }
 
-  /* ---------- Party-Partikel (Konfetti-Lichter) ---------- */
-  function initParticles(){
-    const c=document.getElementById('party-canvas');
-    if(!c) return;
-    const ctx=c.getContext('2d');
-    let W,H,parts=[];
-    const COLORS=['#7c3aed','#a855f7','#ec4899','#f59e0b','#2dd4bf'];
-    function resize(){
-      W=c.width=window.innerWidth; H=c.height=window.innerHeight;
-    }
-    resize(); window.addEventListener('resize',resize);
-    const N=Math.min(90, Math.floor(W/14));
-    for(let i=0;i<N;i++){
-      parts.push({
-        x:Math.random()*W, y:Math.random()*H,
-        r:1.2+Math.random()*2.6,
-        vx:(Math.random()-.5)*.35, vy:Math.random()*.22+.08,
-        col:COLORS[Math.floor(Math.random()*COLORS.length)],
-        a:Math.random()*.5+.25, tw:Math.random()*.02+.004
-      });
-    }
-    function draw(){
-      ctx.clearRect(0,0,W,H);
-      parts.forEach(p=>{
-        p.x+=p.vx; p.y+=p.vy;
-        if(p.y>H+10){p.y=-10;p.x=Math.random()*W;}
-        if(p.x>W+10)p.x=-10; if(p.x<-10)p.x=W+10;
-        p.a+=p.tw;
-        const alpha=0.2+Math.abs(Math.sin(p.a))*.6;
-        ctx.globalAlpha=alpha;
-        ctx.fillStyle=p.col;
-        ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-        ctx.shadowBlur=8; ctx.shadowColor=p.col;
-        ctx.fill();
-      });
-      ctx.globalAlpha=1;
-      requestAnimationFrame(draw);
-    }
-    draw();
-  }
-
   /* ---------- Formular (E-Mail-Versand) ---------- */
   function initForm(data){
     const form=document.getElementById('anfrageForm');
@@ -263,7 +222,6 @@
 
   /* ---------- Init ---------- */
   async function init(){
-    initParticles();
     initNav();
     initReveal();
     document.getElementById('year').textContent=new Date().getFullYear();
