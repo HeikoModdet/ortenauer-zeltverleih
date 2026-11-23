@@ -242,6 +242,9 @@ a{color:inherit;text-decoration:none}
   .hero-actions{flex-direction:column;align-items:stretch;gap:12px}
   .hero-scroll{display:none}
 
+  /* Disco-Glow: Logo wandert auf schmalen Screens seitlich (x≈12%, y≈28%) */
+  .disco .d-glow{left:12%;top:28%;width:34vw;height:34vw}
+
   /* Cards & Galerie: 1 Spalte, voller Touch */
   .cards,.gallery{grid-template-columns:1fr;gap:18px}
   .card,.g-item{border-radius:18px}
