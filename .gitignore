@@ -1,3 +1,6 @@
 # Admin-Zugang bleibt lokal (wird NICHT gepusht)
 admin.html
-js/auth.js.shots/
+js/auth.js
+
+# Screenshot-Testdateien
+.shots/

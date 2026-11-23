@@ -209,37 +209,55 @@
         return;
       }
       const email=(data.form&&data.form.mailto)||'info@ortenauer-zeltverleih.de';
-      const vorname=document.getElementById('f_vorname').value;
-      const nachname=document.getElementById('f_nachname').value;
-      const mail=document.getElementById('f_email').value;
-      const tel=document.getElementById('f_telefon').value;
-      const ort=document.getElementById('f_ort').value;
+      const vorname=document.getElementById('f_vorname').value.trim();
+      const nachname=document.getElementById('f_nachname').value.trim();
+      const mail=document.getElementById('f_email').value.trim();
+      const tel=document.getElementById('f_telefon').value.trim();
+      const ort=document.getElementById('f_ort').value.trim();
       const kat=document.getElementById('f_kategorie').value;
-      const nachr=document.getElementById('f_nachricht').value;
+      const nachr=document.getElementById('f_nachricht').value.trim();
 
-      // Betreff & Body sauber aufbauen
-      const subject='Zeltanfrage: '+kat+' – '+vorname+' '+nachname;
-      const body=
-        'Neue Zeltanfrage über die Website\n============================\n\n'+
-        'Name: '+vorname+' '+nachname+'\n'+
-        'E-Mail: '+mail+'\n'+
-        'Telefon: '+tel+'\n'+
-        'Veranstaltungsort: '+(ort||'-')+'\n'+
-        'Gewünschte Kategorie: '+kat+'\n\n'+
-        'Nachricht:\n'+nachr+'\n'+
-        '\n--\nDatum/Uhrzeit: '+new Date().toLocaleString('de-DE');
+      // Senden-Button deaktivieren während des Versands
+      const btn=form.querySelector('button[type=submit]');
+      const origBtn=btn.textContent;
+      btn.disabled=true; btn.textContent='Wird gesendet…';
+      status.className='form-status'; status.textContent='';
 
-      // Öffne standardmäßig das Mail-Programm (funktioniert überall,
-      // volle Kontrolle, keine externen Dienste nötig)
-      const url='mailto:'+encodeURIComponent(email)+
-        '?subject='+encodeURIComponent(subject)+
-        '&body='+encodeURIComponent(body);
-      if(window.confirm('Ihr E-Mail-Programm öffnet sich jetzt mit der fertig ausgefüllten Anfrage.\nMöchten Sie fortfahren?')){
+      // 1) Serverseitige Zustellung via FormSubmit (statischer GitHub-Pages-Host)
+      const payload={
+        _subject:'Zeltanfrage: '+kat+' – '+vorname+' '+nachname,
+        _template:'table',
+        _captcha:'false',
+        'Name':vorname+' '+nachname,
+        'E-Mail':mail,
+        'Telefon':tel,
+        'Veranstaltungsort':ort||'-',
+        'Kategorie':kat,
+        'Nachricht':nachr
+      };
+      // FormSubmit AJAX-Endpunkt (sendet als E-Mail an die Zieladresse)
+      fetch('https://formsubmit.co/ajax/'+encodeURIComponent(email),{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify(payload)
+      }).then(function(res){
+        return res.json();
+      }).then(function(){
+        status.className='form-status ok';
+        status.textContent='Danke '+vorname+'! Ihre Anfrage wurde versendet. Wir melden uns schnellstmöglich. 🎉';
+        form.reset();
+        btn.disabled=false; btn.textContent=origBtn;
+      }).catch(function(){
+        // 2) Fallback: E-Mail-Programm öffnen (falls Netz des Besuchers blockiert)
+        const subject='Zeltanfrage: '+kat+' – '+vorname+' '+nachname;
+        const body='Name: '+vorname+' '+nachname+'\nE-Mail: '+mail+'\nTelefon: '+tel+'\nVeranstaltungsort: '+(ort||'-')+'\nKategorie: '+kat+'\n\nNachricht:\n'+nachr;
+        const url='mailto:'+encodeURIComponent(email)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+        status.className='form-status ok';
+        status.textContent='Versand fehlgeschlagen – es öffnet sich Ihr E-Mail-Programm mit der fertigen Anfrage.';
         window.location.href=url;
-      }
-      status.className='form-status ok';
-      status.textContent='Danke! Ihr E-Mail-Programm öffnet die fertige Anfrage. Alternativ senden Sie uns bitte eine E-Mail an '+email;
-      form.reset();
+        form.reset();
+        btn.disabled=false; btn.textContent=origBtn;
+      });
     });
   }
 
