@@ -84,7 +84,33 @@ a{color:inherit;text-decoration:none}
 .hero-scroll span{display:block;width:5px;height:5px;background:#fff;border-radius:50%;margin:8px auto;animation:scrDots 1.6s infinite}
 @keyframes scrDots{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(16px)}}
 
-/* ---------- Über ---------- */
+/* ---------- Disco-Licht im Zelt (Hero) ---------- */
+.disco{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.disco .d-glow{
+  position:absolute;left:35%;top:28%;width:22vw;height:22vw;min-width:180px;min-height:180px;
+  transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.7),rgba(236,72,153,.4) 38%,transparent 72%);
+  mix-blend-mode:screen;filter:blur(2px);
+  animation:discoGlow 3.2s ease-in-out infinite;
+}
+@keyframes discoGlow{0%,100%{opacity:.3;transform:translate(-50%,-50%) scale(.85)}50%{opacity:.7;transform:translate(-50%,-50%) scale(1.1)}}
+.disco .d-beam{
+  position:absolute;left:35%;top:28%;width:0;height:0;
+  transform-origin:0 0;
+  mix-blend-mode:screen;filter:blur(1px);animation-fill-mode:both;
+}
+.disco .d1{border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:16vh solid rgba(236,72,153,.5);animation:beam1 4.4s infinite}
+.disco .d2{border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:16vh solid rgba(45,212,191,.5);animation:beam2 5s infinite}
+.disco .d3{border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:16vh solid rgba(245,158,11,.5);animation:beam3 4.7s infinite}
+.disco .d4{border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:16vh solid rgba(168,85,247,.55);animation:beam4 5.3s infinite}
+@keyframes beam1{0%,100%{opacity:0;transform:rotate(-15deg)}15%,40%{opacity:.9;transform:rotate(5deg)}55%{opacity:0}}
+@keyframes beam2{0%,100%{opacity:0;transform:rotate(65deg)}15%,40%{opacity:.9;transform:rotate(85deg)}55%{opacity:0}}
+@keyframes beam3{0%,100%{opacity:0;transform:rotate(150deg)}15%,40%{opacity:.9;transform:rotate(170deg)}55%{opacity:0}}
+@keyframes beam4{0%,100%{opacity:0;transform:rotate(250deg)}15%,40%{opacity:.9;transform:rotate(270deg)}55%{opacity:0}}
+@media(max-width:720px){
+  .disco .d-beam{border-bottom-width:10vh}
+  .disco .d-glow{width:28vw;height:28vw}
+}
 .about{background:var(--ink-2)}
 .about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center}
 .about-media{position:relative}
